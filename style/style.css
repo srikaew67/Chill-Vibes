@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    color: #efefef;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #101010;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.video-container video {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+a {
+    cursor: none;
+}
+
+
+body {
+    cursor: none;
+    background: #101010;
+}
+
+video {
+    width: 100%; /* ทำให้วิดีโอเต็มความกว้างของพื้นที่ตัวองค์ประกอบ */
+    height: 100%; /* ทำให้วิดีโอเต็มความสูงของพื้นที่ตัวองค์ประกอบ */
+    object-fit: cover; /* จัดให้วิดีโอครอบพื้นที่ตัวองค์ประกอบอย่างถูกต้อง */
+}
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.wrap-content {
+    padding-top: 3vw;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.left-content {
+    display: flex;
+    align-items: center;
+}
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
+.center {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    height: auto;
+    position: relative;
+}
+.wrapper {
+    position: relative;
+}
+.cover {
+    width: 60vh;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: all 0.5s;
+}
+.title {
+    z-index: 999;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 200px;
+    transition: all 0.5s;
+}
+.character {
+    opacity: 0;
+    z-index: 999;
+    width: 20rem;
+    right: 0;
+    bottom: 0%;
+    transition: all 0.5s;
+    position: absolute;
+}
+.wrapper:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -10%, 100px);
+}
+.wrapper:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+.wrapper {
+    transition: all 0.5s;
+}
+.wrapper:hover .cover {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+.box {
+    --blur: 16px;
+    --size: clamp(300px, 50vmin, 600px);
+    width: 50vh;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: #000;
+    transform: translateZ(0);
+}
+
+.box__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+    transition: transform 0.2s;
+}
+
+.box__footer {
+    padding: 0 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: red;
+    display: grid;
+    gap: 0.5ch;
+    background: hsl(0 0% 100% / 0.5);
+    backdrop-filter: blur(var(--blur));
+    height: 30%;
+    align-content: center;
+}
+
+.box__action {
+    position: absolute;
+    aspect-ratio: 1;
+    width: calc(var(--size) * 0.15);
+    bottom: 30%;
+    right: 1.5rem;
+    transform: translateY(50%) translateY(calc((var(--size) * 0.4)))
+        translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+    background: purple;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    background: hsl(0 0% 100% / 0.5);
+    /*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+    transition: transform 0.2s;
+}
+
+.box__action svg {
+    aspect-ratio: 1;
+    width: 50%;
+}
+
+.box__footer span:nth-of-type(1) {
+    font-size: calc(var(--size) * 0.065);
+}
+
+.box__footer span:nth-of-type(2) {
+    font-size: calc(var(--size) * 0.035);
+}
+
+.box:is(:hover, :focus-visible) {
+    --hover: 1;
+}
+@media only screen and (max-width: 767px) {
+    .wrap-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-content {
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+    .cover {
+        width: 40vh;
+    }
+    .box {
+        width: 40vh;
+    }
+    .center {
+        padding: 5px;
+    }
+    .title {
+        
+        width: 10rem;
+    }
+    .character {
+        width: 10rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .wrap-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-content {
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+    .cover {
+        width: 40vh;
+    }
+    .box {
+        width: 40vh;
+    }
+    .center {
+        padding: 5px;
+    }
+    .title {
+        width: 10rem;
+    }
+    .character{
+        width: 10rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .wrap-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

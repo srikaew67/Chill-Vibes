@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHILL VIBES</title>
+    <link rel="icon" href="assets/Untitled-1.png" type="image/icon type">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
+
+
+<body>
+    <div class="cursor"></div>
+    <div id="headerBand"></div>
+    <script>
+        // Function to load HTML file
+        function loadHTML(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Remove head section from HTML content
+                    var htmlWithoutHead = xhr.responseText.replace(/<head[\s\S]*?<\/head>/i, '');
+                    callback(htmlWithoutHead);
+                }
+            };
+            xhr.send();
+        }
+
+
+        // Function to insert HTML content and run script
+        function insertHTML(html) {
+            document.getElementById('headerBand').innerHTML = html;
+
+            // Execute any scripts within the inserted content
+            var scripts = document.getElementById('footerBand').getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+                eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+            }
+        }
+
+        // Load HTML file and insert into footerBand (assuming header.html is in the same directory)
+        loadHTML('header.html', insertHTML);
+    </script>
+    <div class="main-video">
+        <div class="video-container">
+            <video class="video rain" autoplay loop muted>
+                <source id="rain" src="https://raw.githubusercontent.com/srikaew67/Sound/main/BG VID.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script src="mouse.js"></script>
+
+    <div class="wrapper">
+        <div class="centeredBox">
+            <span id="typewriter" data-array=""></span>
+            <span class="cursortype"></span>
+        </div>
+        <div class="parag">
+            <p>the essence of true sound craftsmanship with our state-of-the-art technology.  <br><span>Say farewell to
+                synthetic tones and welcome the richness of natural audio.<br> Elevate your productions to unparalleled
+                levels of excellence.<br> Discover the difference with “Nature vibes” today.</p></span>
+        </div>
+        <a href="playback.html" style="width: 9rem; margin-top: 20px;"><button>TRY IT
+            </button>
+        </a>
+    </div>
+
+
+
+    <div id="footerBand"></div>
+
+    <script>
+        // Function to load HTML file
+        function loadHTML(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Remove head section from HTML content
+                    var htmlWithoutHead = xhr.responseText.replace(/<head[\s\S]*?<\/head>/i, '');
+                    callback(htmlWithoutHead);
+                }
+            };
+            xhr.send();
+        }
+
+
+        // Function to insert HTML content and run script
+        function insertHTML(html) {
+            document.getElementById('footerBand').innerHTML = html;
+
+            // Execute any scripts within the inserted content
+            var scripts = document.getElementById('footerBand').getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+                eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+            }
+        }
+
+        // Load HTML file and insert into footerBand (assuming header.html is in the same directory)
+        loadHTML('footer.html', insertHTML);
+    </script>
+    <script src="script/mouse.js"></script>
+    <script src="script/about.js"></script>
+    
+</body>
+
+</html>

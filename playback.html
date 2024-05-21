@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILL VIBES</title>
+    <link rel="icon" href="assets/Untitled-1.png" type="image/icon type">
+    <link rel="stylesheet" href="style/playback.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <a href="index.html"><img src="assets/LOGO.png" class="logo" alt=""></a>
+    <div class="main-video">
+        <div class="video-container">
+            <video class="video rain" autoplay loop muted>
+                <source id="rain"
+                    src="https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_day_rain.mp4"
+                    type="video/mp4">
+            </video>
+            <video class="video no-rain" autoplay loop muted>
+                <source id="no-rain"
+                    src="https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_day.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="button">
+        <div class="toggle rainbtn" id="rain">
+            <div class="playButton" data-sound="rain">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">City Rain</div>
+                <div class="volume-container" id="rainVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="rain">
+                </div>
+            </div>
+        </div>
+        <div class="toggle songbtn">
+            <div class="playButton" data-sound="song">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">รักเธอมากเท่าไร</div>
+                <div class="volume-container" id="songVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="song">
+                </div>
+            </div>
+        </div>
+        <div class="toggle treebtn">
+            <div class="playButton" data-sound="tree">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">Tree</div>
+                <div class="volume-container" id="treeVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="tree">
+                </div>
+            </div>
+        </div>
+        <div class="toggle keyboardbtn">
+            <div class="playButton" data-sound="keyboard">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">Keyboard</div>
+                <div class="volume-container" id="keyboardVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="keyboard">
+                </div>
+            </div>
+        </div>
+        <div class="toggle airbtn">
+            <div class="playButton" data-sound="air">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">Air</div>
+                <div class="volume-container" id="airVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="air">
+                </div>
+            </div>
+        </div>
+        <div class="toggle bookbtn">
+            <div class="playButton" data-sound="book">
+                <div></div>
+            </div>
+            <div class="wrap card">
+                <div class="name">Book</div>
+                <div class="volume-container" id="bookVolumeContainer">
+                    <input type="range" min="0" max="100" class="slider" data-sound="book">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/script/scripts.js"></script>
+    <script src="/script/mouse.js"></script>
+</body>
+
+</html>

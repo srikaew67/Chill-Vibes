@@ -1,0 +1,68 @@
+@media only screen and (max-width: 767px) {
+    .video-container {
+        left: 0;
+        width: 400%; /* Set the video width to 200% to cover the left part */
+    }
+    .songbtn {
+        top: 35%;
+        left: 67%;
+    }
+    .rainbtn {
+        top: 35%;
+        left: 15%;
+    }
+    .airbtn{
+        top:10%;
+        left:40%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .video-container {
+        left: 0;
+        width: 175%;
+    }
+    .rainbtn {
+        top: 35%;
+        left: 67%;
+    }
+    .songbtn {
+        top: 35%;
+        left: 15%;
+    }
+    .bookbtn{
+        top: 75%;
+        left:40%;
+    }
+    .airbtn{
+        top:15%;
+        left:10%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .rainbtn {
+        top: 35%;
+        left: 67%;
+    }
+    .songbtn {
+        top: 30%;
+        left: 15%;
+    }
+    .treebtn {
+        top: 45%;
+        left: 45%;
+    }
+    .keyboardbtn {
+        top: 75%;
+        right: 25%;
+    }
+    .airbtn{
+        top:10%;
+        left:10%;
+    }
+    .bookbtn{
+        top: 80%;
+        left:40%;
+    }
+}
